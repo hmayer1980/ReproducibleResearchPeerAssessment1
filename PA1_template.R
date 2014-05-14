@@ -6,7 +6,6 @@ rm(list=ls());
 #set timeformat to english on windows systems.
 Sys.setlocale(category = "LC_TIME", locale = "english");
 
-
 Amd <- read.csv(
     file=unzip(zipfile="activity.zip",files=c("activity.csv"))
     ,header=TRUE
@@ -28,7 +27,6 @@ colnames(AmdbyDate)[2]<-"steps";
 
 #https://class.coursera.org/repdata-002/forum/thread?thread_id=49
 #discussion about hist or barplot - i started with barplot
-#
 hist(x=AmdbyDate$steps,col="blue",xlab="Steps",main="Histogram of steps");
 
 MeanOfStepsPerDay<-round(mean(x=AmdbyDate$steps),4);
