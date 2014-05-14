@@ -223,6 +223,8 @@ AmdTidy &lt;- Amd[!is.na(Amd$steps), ]
 
 <p>Generate a historgram of the preaggregated data on day level.</p>
 
+<p>NOTE: According to this discussion a &ldquo;historgram&rdquo; should be used. If I would read it I had initially created a barplot, but now use the sugessted hist plot. <a href="https://class.coursera.org/repdata-002/forum/thread?thread_id=49">See at Discussion Page</a></p>
+
 <pre><code class="r">AmdbyDate &lt;- aggregate.data.frame(x = AmdTidy[, &quot;steps&quot;], by = list(datefactors = AmdTidy$datefactors), 
     FUN = sum)
 colnames(AmdbyDate)[2] &lt;- &quot;steps&quot;
